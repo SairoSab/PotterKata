@@ -1,3 +1,3 @@
-export function wadus(): any {
-  return "wadus"
+export function PotterBooksOffers(): any {
+  return 8
 };

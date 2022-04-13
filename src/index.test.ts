@@ -1,10 +1,10 @@
-import { wadus } from "./index"
+import { PotterBooksOffers } from "./index"
 
-describe("Wadus", () => {
-  it("returns 'wadus'", () => {
-    const expected = "wadus";
+describe("Potter", () => {
+  it("returns price from a single book", () => {
+    const expected = 8;
 
-    const result = wadus();
+    const result = PotterBooksOffers();
 
     expect(result).toEqual(expected);
   })
