@@ -13,18 +13,22 @@ export class PotterBooksOffers{
     this.totalPrice = this.calculatePurchase()
   }
 
+
   calculatePurchase(): number{
     
-    var total: number = 0
+    let total: number = 0
 
     if (this.purchase.bookA === 1 && this.purchase.bookB === 1){
       return ONE_BOOK_PRICE*2*TWO_DIFFERENT_BOOKS_DISCCOUNT
     }
-
-    if (this.purchase.bookA === 1){
-      total = ONE_BOOK_PRICE
-    }
     
+    for (let index in this.purchase){
+      total = this.purchase[index] * ONE_BOOK_PRICE
+    }
     return total
+  }
+
+  getCalculatedPrice(): number {
+    return this.totalPrice    
   }
 };
